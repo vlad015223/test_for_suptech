@@ -8,8 +8,10 @@ logging.basicConfig(level=logging.INFO)
 bot = Bot(token=TG_TOKEN)
 dp = Dispatcher(bot)
 
+# записываем key_id сервисного аккаунта гугл (json файл)
 client = pygsheets.authorize(service_account_file=SERVICE_FILE)
 
+# открываем нужную доку и лист
 spreadsheet = client.open("test_for_suptech")
 worksheet = spreadsheet.worksheet_by_title("Лист1")
 
@@ -23,15 +25,17 @@ async def handle_message(message: types.Message):
 
         last_row = worksheet.get_col(1)
         for index, value in enumerate(last_row):
+            # добавляем запись в первое пустое поле
             if value == '':
-                # добавляем запись в первое пустое поле
                 worksheet.update_values(f"A{index+1}", [[user_login]])
                 worksheet.update_values(f"B{index+1}", [[text]])
                 worksheet.update_values(f"C{index+1}", [[formatted_date]])
                 break
 
+        # отправляем юзеру отбивку и ссылку на гуглдок
         await message.reply('Сообщение успешно записано!\nhttps://docs.google.com/spreadsheets/d/1gL-to78y5YGjDZMsHQ5w5hP4hC7D5kFZYmmY5BFqhdQ/edit#gid=0')
 
+    # при появлении любой ошибки записываем её в файл errors.log
     except Exception as e:
         logging.exception(e)
         with open('errors.log', 'a') as f:
