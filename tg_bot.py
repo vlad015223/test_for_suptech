@@ -3,7 +3,7 @@ import pygsheets
 from aiogram import Bot, Dispatcher, types, executor
 from tokens import TG_TOKEN, SERVICE_FILE
 
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(level=logging.ERROR)
 
 bot = Bot(token=TG_TOKEN)
 dp = Dispatcher(bot)
