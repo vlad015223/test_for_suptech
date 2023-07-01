@@ -1,12 +1,8 @@
 Time: 2023-07-01 01:31:52, Error: {'code': 403, 'message': 'The caller does not have permission', 'status': 'PERMISSION_DENIED'}
-Time: 2023-07-01 01:31:56, Error: {'code': 403, 'message': 'The caller does not have permission', 'status': 'PERMISSION_DENIED'}
-Time: 2023-07-01 01:37:10, Error: {'code': 403, 'message': 'The caller does not have permission', 'status': 'PERMISSION_DENIED'}
 Time: 2023-07-01 01:40:11, Error: Object of type datetime is not JSON serializable
 Time: 2023-07-01 01:41:17, Error: Object of type datetime is not JSON serializable
-Time: 2023-07-01 02:19:45, Error: Object of type datetime is not JSON serializable
 Time: 2023-07-01 02:21:51, Error: 'NoneType' object has no attribute 'strftime'Time: 2023-07-01 02:43:49, Error: 'Worksheet' object has no attribute 'get_column_index'
 Time: 2023-07-01 02:45:00, Error: address row should be int
-Time: 2023-07-01 02:49:26, Error: address row should be int
 Time: 2023-07-01 02:49:54, Error: address row should be int
 Time: 2023-07-01 02:50:21, Error: int() argument must be a string, a bytes-like object or a number, not 'list'
 Time: 2023-07-01 02:54:07, Error: This range already has a worksheet with different title set.
