@@ -27,8 +27,8 @@ async def handle_message(message: types.Message):
 
         last_row = worksheet.get_col(1)
         for index, value in enumerate(last_row):
+            # добавляем запись в первое пустое поле
             if value == '':
-                # добавляем запись в первое пустое поле
                 worksheet.update_values(f"A{index+1}", [[user_login]])
                 worksheet.update_values(f"B{index+1}", [[text]])
                 worksheet.update_values(f"C{index+1}", [[formatted_date]])
