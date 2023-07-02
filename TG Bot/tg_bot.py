@@ -10,7 +10,7 @@ logging.basicConfig(level=logging.ERROR, filename='TG BOT/errors.log', filemode=
 bot = Bot(token=TG_TOKEN)
 dp = Dispatcher(bot)
 
-# записываем key_id сервисного аккаунта гугл (json файл)
+# в SERVICE_FILE записываем key_id сервисного аккаунта гугл (путь на json файл)
 client = pygsheets.authorize(service_account_file=SERVICE_FILE)
 
 # открываем нужную доку и лист
