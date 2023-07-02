@@ -17,6 +17,7 @@ client = pygsheets.authorize(service_account_file=SERVICE_FILE)
 spreadsheet = client.open("test_for_suptech")
 worksheet = spreadsheet.worksheet_by_title("Лист1")
 
+
 @dp.message_handler()
 async def handle_message(message: types.Message):
     try:
@@ -40,6 +41,7 @@ async def handle_message(message: types.Message):
     # при появлении любой ошибки записываем её в файл errors.log
     except Exception as e:
         logging.exception(e)
+
 
 if __name__ == '__main__':
     executor.start_polling(dp)
