@@ -8,3 +8,8 @@ Traceback (most recent call last):
   File "c:/Dev/leetcode/tg_bot.py", line 23, in handle_message
     message_date = message.date123
 AttributeError: 'Message' object has no attribute 'date123'
+2023-07-02 13:11:06,854 - ERROR - 'User' object has no attribute 'username321'
+Traceback (most recent call last):
+  File "c:/Dev/leetcode/TG Bot/tg_bot.py", line 23, in handle_message
+    user_login = message.from_user.username321
+AttributeError: 'User' object has no attribute 'username321'

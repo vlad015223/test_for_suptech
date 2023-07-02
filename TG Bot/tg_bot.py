@@ -4,7 +4,7 @@ from aiogram import Bot, Dispatcher, types, executor
 from tokens import TG_TOKEN, SERVICE_FILE
 
 
-logging.basicConfig(level=logging.ERROR, filename='errors.log', filemode='a',
+logging.basicConfig(level=logging.ERROR, filename='TG BOT/errors.log', filemode='a',
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
 bot = Bot(token=TG_TOKEN)

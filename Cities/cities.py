@@ -27,5 +27,5 @@ class CityPopulation:
                 return city
 
 
-city_population = CityPopulation("input.json")
+city_population = CityPopulation("Cities/input.json")
 print(city_population.get_random_city())
